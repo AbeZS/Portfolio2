@@ -1,0 +1,146 @@
+/*
+CSS Reset
+---------------------------------------------------------------
+*/
+html, body, p, h1, h2, h3, h4, h5, h6, a {
+    margin: 0;
+    padding: 0
+}
+* {
+    box-sizing: border-box;
+}
+
+/*
+Global styles
+---------------------------------------------------------------
+*/
+body {
+    background-color: #1f211e;
+    height: 100vh;
+    font-family: 'Abel', sans-serif;
+    font-size: 1.2em;
+}
+.side-bar-container {
+    position: relative;
+    z-index: 100;
+}
+.side-bar {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    color: #56b865;
+    margin-right: 2%;
+    margin-top: 2%;
+    width: 5%;
+}
+.side-bar-logo {
+    height: 3em;
+}
+.side-bar-link1 {
+    max-height: 6em;
+}
+.side-bar-link2 {
+    max-height: 7.5em;
+}
+.side-bar p {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: center;
+    margin-block-start: -50%;
+    transform: translate(50%, 0px);
+}
+a:hover {
+    color: aliceblue;
+}
+a {
+    text-decoration: none;
+    color: #56b865;
+}
+/*
+Home page styles
+---------------------------------------------------------------
+*/
+
+.computer-gif-area {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.comp-content-wrap {
+    padding-top: 15%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.computer-gif {
+    max-width: 20%;
+    justify-self: center;
+}
+.see-work {
+    width: 150px;
+    height: 45px;
+    position: relative;
+    border: 2px solid #56b865;
+    border-radius: 5%;
+    color: #56b865;
+    justify-self: center;
+    margin: 30px;
+}
+.see-work p {
+    margin: 0;
+    position: absolute;
+    font-size: 1.1em;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+/*
+Responsive styles
+---------------------------------------------------------------
+*/
+footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 .7em;
+}
+footer img {
+    width: 1.3em;
+}
+footer a {
+    margin: 0 .5em;
+}
+/*
+Responsive styles
+---------------------------------------------------------------
+*/
+@media screen and (max-width: 795px) {
+    .comp-content-wrap {
+        padding-top: 30%;
+    }
+    .computer-gif {
+        max-width: 40%;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .comp-content-wrap {
+        padding-top: 50%;
+    }
+    .computer-gif {
+        max-width: 50%;
+    }
+    .side-bar {
+        width: 12%;
+    }
+    .side-bar-logo {
+        height: 3em;
+    }
+}
