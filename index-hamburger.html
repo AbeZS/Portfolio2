@@ -5,7 +5,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="">
-        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/styles-hamburger.css">
         <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
     </head>
     <body>
@@ -13,15 +13,26 @@
         ------------------------------------------------------>
         <div class="side-bar-container">
             <nav class="side-bar">
-                <a href="#" style="justify-self: center;">
+                <a href="#" class='side-bar-logo-link'>
                     <img class='side-bar-logo' src="images/3am-temp-logo-greenAsset 2.svg">
                 </a>
-                <a href="#" >
-                    <img src="images/work-textAsset 2.svg" alt="Work Link" class='side-bar-link1'>
-                </a>
-                <a href="#" class="sidebar-link">
-                    <img src='images/about-textAsset 3.svg' alt="About Link" class='side-bar-link2'>
-                </a>
+                <!--Hamburger
+                ---------------------------------------------->
+                <div class="side-bar-link-container">
+                    <div style="display:grid; grid-template-columns: 1fr; justify-items: center;">
+                            <input type="checkbox">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                    </div>
+                    <div style="display:grid; grid-template-columns: 1fr;"></div>
+                    <a href="#" >
+                        <img src="images/work-textAsset 2.svg" alt="Work Link" class='side-bar-link1'>
+                    </a>
+                    <a href="#" class="sidebar-link">
+                        <img src='images/about-textAsset 3.svg' alt="About Link" class='side-bar-link2'>
+                    </a>
+                </div>
             </nav>
         </div>
         <!-- Main section of the home page 

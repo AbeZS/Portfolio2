@@ -27,6 +27,11 @@ a {
     text-decoration: none;
     color: #56b865;
 }
+input {
+    margin: 0;
+    padding: 0;
+    max-width: 50px;
+}
 
 /*
 Sidebar/Navbar styles
@@ -48,14 +53,114 @@ Sidebar/Navbar styles
     margin-top: 2%;
     width: 5%;
 }
-.side-bar-logo {
-    height: 4em;
+.side-bar-link-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+    color: #56b865;
+}
+.side-bar-link-container2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+    color: #56b865;
+}
+.side-bar-link-container3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+    color: #56b865;
+}
+
+/*
+Hamburger styles
+---------------------------------------------------------------
+*/
+.side-bar input {
+    display: block;
+    width: 10%;
+    height: 32px;
+    position: fixed;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 101;
+
+}
+.side-bar-link-container span{
+    display: block;
+    width: 50%;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #56b865;
+    border-radius: 3px;
+    z-index: 100;
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    opacity 0.55s ease;
+}
+
+/*
+Hamburger animation
+---------------------------------------------------------------
+*/
+.side-bar-link-container span:first-child {
+  transform-origin: 0% 0%;
+}
+.side-bar-link-container span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+.side-bar-link-container input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+.side-bar-link-container input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+.side-bar-link-container input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+End Hamburger animation
+*/
+input#hamburger {
+	display: none;
+}
+
+.nav-links {
+    width: 71px;
+    position: absolute;
+    right: -71px;
+    transition: right .5s ease-in-out;
+}
+
+nav label {
+	cursor: pointer;
+	display: block;
+	width: 42px;
+	height: 42px;
+	background-size: 22px auto;
+	position: absolute;
+	top: 78px;
+	right: 42px;
 }
 .side-bar-link1 {
     max-height: 6em;
 }
 .side-bar-link2 {
     max-height: 7.5em;
+}
+.side-bar-logo-link {
+    justify-self: center;
+}
+.side-bar-logo {
+    height: 4em;
 }
 .side-bar p {
     writing-mode: vertical-rl;
